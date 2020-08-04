@@ -15,27 +15,24 @@ class Warrior:
 
 
 class Hero(Warrior):
-    def __init__(self, health, power, sheild):
+    def __init__(self, health, power):
         super().__init__(health, power)
-        self.sheild = sheild
 
 
 class Goblin(Warrior):
-    def __init__(self, health, power, drool):
+    def __init__(self, health, power):
         super().__init__(health, power)
-        self.drool = drool
 
 
-hiro = Hero(10, 5, 2)
-spike = Goblin(6, 2, 1)
+hiro = Hero(10, 5)
+spike = Goblin(6, 2)
 
 
 def main():
     while spike.health > 0 and hiro.health > 0:
-        print("You have %d health and %d power. You have a sheild with + %d protection" %
-              (hiro.health, hiro.power, hiro.sheild))
-        print("The goblin has %d health and %d power. He can spit acid which adds + %d to his attach" %
-              (spike.health, spike.power, spike.drool))
+        print("You have %d health and %d power." % (hiro.health, hiro.power))
+        print("The goblin has %d health and %d power." %
+              (spike.health, spike.power))
         print()
         print("What do you want to do?")
         print("1. fight goblin")
